@@ -7,6 +7,7 @@ import jobsRoutes from './routes/jobs.routes';
 import submissionsRoutes from './routes/submissions.routes';
 import walletRoutes from './routes/wallet.routes';
 import usersRoutes from './routes/users.routes';
+import contactRoutes from './routes/contact.routes';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use('/api/jobs', jobsRoutes);
 app.use('/api/submissions', submissionsRoutes);
 app.use('/api/wallet', walletRoutes);
 app.use('/api/users', usersRoutes);
+app.use('/api/contact', contactRoutes);
 
 app.use(errorHandler);
 
