@@ -56,7 +56,7 @@ export const getContactMessages = asyncHandler(async (req: Request, res: Respons
 // @route   PATCH /api/contact/:id
 // @access  Private/Admin
 export const markMessageAsRead = asyncHandler(async (req: Request, res: Response) => {
-  const { id } = req.params;
+  const id = req.params.id as string;
 
   const message = await prisma.contactMessage.findUnique({
     where: { id },
